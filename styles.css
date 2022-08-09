@@ -1,4 +1,13 @@
+:root {
+    --main-color: #6ab187;
+    --second-color: #f4cc70;
+    --third-color: #26968c;
+    --fourth-color: #de7a22;
+}
+
+
 html, body {
+    font-family: "Open Sans", sans-serif;
     margin: 0px;
     padding: 0px;
     height: 100%;
@@ -6,41 +15,73 @@ html, body {
 
 body {
     text-align: center;
+    background-color: var(--main-color);
 }
 
 .book {
-    padding: 0px;
+    background-color: var(--second-color);
+    color: black;
+    padding: 5px 0px 0px 0px;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
-    border: 2px solid black;
+    border: none;
+    border-radius: 5px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
 }
 
+h1 {
+    color: black;
+    font-weight: 600;
+}
+
+.title {
+    font-size: 1.3em;
+    font-weight: 550;
+}
+
+.has-read {
+    font-style: italic;
+}
+
 .display {
-    margin-left: 200px;
-    margin-right: 200px;
+    margin-left: 100px;
+    margin-right: 100px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 20px;
 }
 
 .book button {
-    width: 20px;
+    width: 70px;
     text-align: center;
     position: relative;
     bottom: 0px;
-    left: calc(100% - 20px);
+    left: calc(100% - 70px);
     border: none;
-    background-color: rgba(226, 53, 53, .7);
+    background-color: var(--fourth-color);
 }
 
-.addBook button {
+.openForm button {
     margin-top: 20px;
+    width: 50px;
+    border: none;
+    background-color: var(--fourth-color);
+    font-size: 1em;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
 }
 
-.addBook {
-    margin-left: 200px;
-    margin-right: 200px;
+.openForm button:hover, .book button:hover {
+    transform: scale(1.05);
+}
+
+.openForm button:active, .book button:active {
+    box-shadow: none;
+    transform: none;
+}
+
+.openForm {
+    margin-left: 100px;
+    margin-right: 100px;
     text-align: end;
 }
 
@@ -49,3 +90,24 @@ body {
     position: relative;
 }
 
+form {
+    display: flex;
+    justify-content: center;
+}
+
+fieldset {
+    margin: 10px;
+    padding: 0px;
+    position: relative;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+
+.addBook {
+    width: 200px;
+}

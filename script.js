@@ -23,26 +23,24 @@ function displayBooks(arr) {
     for (book in arr) {
         display.innerHTML += `<div class="book"> 
             <div class="title">${arr[book].title}</div>  
-            <div class="author">${arr[book].author}</div>  
+            <div class="author"> - ${arr[book].author}</div>  
             <div class="pages">${arr[book].pages}</div>
             <div class="has-read">${
-                arr[book].has_read? "read": "unread"
+                arr[book].has_read? "Read": "Unread"
             }</div> 
-            <button>X</button>
+            <button>Remove</button>
         </div>`;
     }
 
     const remove = document.querySelectorAll(".book button");
-    console.log(remove);
     Array.from(remove).forEach(bttn => bttn.addEventListener("click", () => {
-        console.log("remove clicked");
         myLibrary.splice(Array.from(remove).indexOf(bttn), 1);
         displayBooks(myLibrary);
     }));
 }
 
 const display = document.getElementsByClassName("display")[0];
-const addButton = document.getElementsByClassName("addBook")[0].getElementsByTagName("button")[0];
+const addButton = document.getElementsByClassName("openForm")[0].getElementsByTagName("button")[0];
 const form = document.getElementsByClassName("pop-up")[0];
 
 addButton.addEventListener("click", () => {
