@@ -7,3 +7,45 @@ html, body {
 body {
     text-align: center;
 }
+
+.book {
+    padding: 0px;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    border: 2px solid black;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+.display {
+    margin-left: 200px;
+    margin-right: 200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+}
+
+.book button {
+    width: 20px;
+    text-align: center;
+    position: relative;
+    bottom: 0px;
+    left: calc(100% - 20px);
+    border: none;
+    background-color: rgba(226, 53, 53, .7);
+}
+
+.addBook button {
+    margin-top: 20px;
+}
+
+.addBook {
+    margin-left: 200px;
+    margin-right: 200px;
+    text-align: end;
+}
+
+.hide {
+    display: none;
+    position: relative;
+}
+
