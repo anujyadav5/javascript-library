@@ -60,8 +60,8 @@ form.addEventListener("submit", function(event) {
     displayBooks(myLibrary);
 });
 
-one = new Book("Man's Search for Meaning", "Viktor", 169, true);
-two = new Book("Thus Spoke Zarathustra", "Nietszche", 375, false);
+one = new Book("Man's Search for Meaning", "Viktor", 165, true);
+two = new Book("Thus Spoke Zarathustra", "Nietszche", 327, true);
 
 myLibrary.push(one);
 myLibrary.push(two);

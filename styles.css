@@ -70,11 +70,11 @@ h1 {
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
 }
 
-.openForm button:hover, .book button:hover {
+.openForm button:hover, .book button:hover, .addBook:hover {
     transform: scale(1.05);
 }
 
-.openForm button:active, .book button:active {
+.openForm button:active, .book button:active, .addBook:active {
     box-shadow: none;
     transform: none;
 }
@@ -107,7 +107,21 @@ fieldset {
     gap: 5px;
 }
 
+fieldset input {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    padding: 4px ;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+fieldset input:focus {
+    outline: none;
+    border: 2px solid #26968c;
+}
 
 .addBook {
-    width: 200px;
+    align-self: flex-end;
+    border: none;
+    background-color: var(--fourth-color);
 }
